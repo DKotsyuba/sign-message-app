@@ -5,6 +5,7 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/sign-message-app/',
   plugins: [
     react(),
     nodePolyfills({
@@ -21,7 +22,7 @@ export default defineConfig({
     port: 3000,
   },
   build: {
-    outDir: 'dist',
+    outDir: 'docs',
     sourcemap: true,
   },
 });
