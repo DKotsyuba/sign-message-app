@@ -13,6 +13,7 @@ node_modules
 .pnp.js
 
 # Build
+/dist
 /dist-ssr
 /out-tsc
 /tmp
