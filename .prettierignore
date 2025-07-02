@@ -1,0 +1,20 @@
+# Build output
+dist
+build
+
+# Node modules
+node_modules
+
+# Package files
+package-lock.json
+yarn.lock
+
+# Log files
+*.log
+
+# Editor directories
+.idea
+.vscode
+
+# Other
+.DS_Store
