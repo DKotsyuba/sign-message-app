@@ -13,10 +13,13 @@ type Events = {
 };
 
 const emitter = mitt<Events>();
-addListener('accountChange', res => {
-  if (res.type === 'accountChange') {
-    emitter.emit('accountChange', res.addresses);
-  }
+window.addEventListener('load', async () => {
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  addListener('accountChange', res => {
+    if (res.type === 'accountChange') {
+      emitter.emit('accountChange', res.addresses);
+    }
+  });
 });
 
 export const useXverseBitcoinWalletDriver = (): ConnectWalletDriver => {
